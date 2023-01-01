@@ -1,5 +1,5 @@
 import playlist
-import song
+from song import dlSong
 
 from pytube import YouTube, Playlist
 from art import *
@@ -11,8 +11,8 @@ def greet():
     print()
 
 def menu():
-    print('[1] for a playlist download')
-    print('[2] for an audio download from a video')
+    print('[1] for a playlist download.')
+    print('[2] for an audio download from a video.')
     print()
 
 def getInput():
@@ -26,3 +26,6 @@ def getInput():
 greet()
 menu()
 method = getInput()
+
+if method == 2:
+    dlSong()
